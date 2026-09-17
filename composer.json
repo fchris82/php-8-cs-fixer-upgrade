@@ -1,0 +1,31 @@
+{
+    "name": "phpconverter/phpconverter",
+    "description": "PHP 7/5.6 to PHP 8.2 migration via PHP CS Fixer custom rules",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "kubawerlos/php-cs-fixer-custom-fixers": "^3.21"
+    },
+    "require-dev": {
+        "doctrine/annotations": "^2.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpConverter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhpConverter\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "fix": "php-cs-fixer fix",
+        "fix-dry": "php-cs-fixer fix --dry-run --diff"
+    },
+    "minimum-stability": "stable"
+}
